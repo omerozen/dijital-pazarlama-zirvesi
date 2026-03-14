@@ -242,38 +242,44 @@ p {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.65s ease;
-  background: linear-gradient(
+  background-image: linear-gradient(
       115deg,
       rgba(4, 7, 21, 0.95) 20%,
       rgba(7, 13, 39, 0.65) 48%,
       rgba(20, 14, 40, 0.78) 100%
     ),
-    radial-gradient(circle at 10% 10%, rgba(34, 76, 192, 0.5), transparent 28%);
-}
-
-.slide:nth-child(2) {
-  background: linear-gradient(
-      120deg,
-      rgba(6, 9, 28, 0.96) 24%,
-      rgba(16, 20, 55, 0.74) 60%,
-      rgba(45, 23, 16, 0.62) 100%
-    ),
-    radial-gradient(circle at 80% 25%, rgba(245, 185, 92, 0.24), transparent 36%);
-}
-
-.slide:nth-child(3) {
-  background: linear-gradient(
-      100deg,
-      rgba(7, 13, 38, 0.95) 10%,
-      rgba(24, 26, 66, 0.7) 58%,
-      rgba(42, 24, 63, 0.77) 100%
-    ),
-    radial-gradient(circle at 75% 70%, rgba(255, 193, 85, 0.2), transparent 40%);
+    radial-gradient(circle at 10% 10%, rgba(34, 76, 192, 0.5), transparent 28%),
+    url("assets/slider-images/dijital-pazarlama-background.png");
+  background-size: auto, auto, cover;
+  background-position: center, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
 }
 
 .slide.is-active {
   opacity: 1;
   pointer-events: auto;
+}
+
+.slide--poster {
+  background-size: auto, auto, cover;
+  background-position: center, center, right center;
+}
+
+.slide--poster .slide-content {
+  display: grid;
+  grid-template-columns: minmax(0, 58%) minmax(0, 42%);
+}
+
+.slide--poster .slide-content > * {
+  grid-column: 1;
+  max-width: 640px;
+}
+
+.hero .hero-title--poster {
+  font-size: clamp(2.7rem, 5.8vw, 4.7rem);
+  line-height: 0.94;
+  letter-spacing: 0.8px;
+  margin-bottom: 14px;
 }
 
 .slide-overlay {
@@ -307,6 +313,48 @@ p {
   color: var(--accent);
 }
 
+.hero-partnership {
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid rgba(245, 210, 123, 0.75);
+}
+
+.hero-org {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-org-logo {
+  width: 108px;
+  height: 108px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.hero-org-text {
+  display: grid;
+  gap: 4px;
+  line-height: 1.05;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.4);
+}
+
+.hero-org-text span:first-child {
+  color: #f7f8ff;
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2vw, 2rem);
+}
+
+.hero-org-text span:last-child {
+  color: #f7f8ff;
+  font-size: clamp(1.05rem, 2vw, 2.2rem);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .slide-subtitle {
   font-size: clamp(1.05rem, 2.2vw, 1.3rem);
 }
@@ -323,6 +371,43 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.hero-collab-badge {
+  position: absolute;
+  top: 22px;
+  right: max(20px, 4vw);
+  z-index: 8;
+  display: grid;
+  justify-items: center;
+  gap: 0;
+  pointer-events: none;
+}
+
+.hero-collab-badge-logo-shell {
+  padding: 4px 7px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(12, 22, 54, 0.12);
+  backdrop-filter: blur(4px) brightness(1.12) saturate(110%);
+  -webkit-backdrop-filter: blur(4px) brightness(1.12) saturate(110%);
+}
+
+.hero-collab-badge-logo {
+  width: clamp(72px, 8.5vw, 112px);
+  height: auto;
+  display: block;
+}
+
+.hero-collab-badge-text {
+  margin: 4px 0 0;
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(1.1rem, 1.9vw, 1.6rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 
 .slider-controls {
@@ -387,37 +472,25 @@ p {
   padding-left: 18px;
 }
 
-.speaker-grid {
-  margin-top: 20px;
+.speaker-poster-grid {
+  margin-top: 24px;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
-.speaker-card {
-  background: linear-gradient(165deg, rgba(21, 35, 91, 0.88), rgba(9, 14, 42, 0.88));
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 18px;
-  padding: 18px;
-  min-height: 138px;
-  transition: transform 0.25s ease, border-color 0.25s ease;
-}
-
-.speaker-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(255, 206, 102, 0.6);
-}
-
-.speaker-card h3 {
-  font-size: 1.12rem;
-}
-
-.speaker-card p {
+.speaker-poster {
   margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid #d7a84a;
+  background: transparent;
 }
 
-.speaker-card--featured {
-  background: linear-gradient(145deg, rgba(88, 52, 11, 0.92), rgba(29, 21, 46, 0.92));
+.speaker-poster img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .program .schedule {
@@ -483,7 +556,8 @@ p {
   height: auto;
   padding: 10px 14px;
   border-radius: 12px;
-  background: #ffffff;
+  border: 0;
+  background: transparent;
   margin: 2px 0 14px;
 }
 
@@ -542,8 +616,9 @@ p {
 }
 
 @media (max-width: 1000px) {
-  .speaker-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .speaker-poster-grid {
+    grid-template-columns: repeat(3, minmax(0, 220px));
+    justify-content: center;
   }
 }
 
@@ -586,7 +661,11 @@ p {
     padding-bottom: 110px;
   }
 
-  .speaker-grid,
+  .speaker-poster-grid {
+    grid-template-columns: repeat(2, minmax(0, 220px));
+    justify-content: center;
+  }
+
   .sponsor-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -595,6 +674,32 @@ p {
     grid-template-columns: 1fr;
     gap: 6px;
   }
+
+  .hero-org-logo {
+    width: 78px;
+    height: 78px;
+  }
+
+  .hero-org-text span:first-child {
+    font-size: 1rem;
+  }
+
+  .hero-org-text span:last-child {
+    font-size: 1rem;
+  }
+
+  .hero-collab-badge {
+    top: 16px;
+    right: 16px;
+  }
+
+  .hero-collab-badge-logo {
+    width: 86px;
+  }
+
+  .hero-collab-badge-text {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -602,8 +707,39 @@ p {
     display: none;
   }
 
-  .speaker-grid,
+  .speaker-poster-grid {
+    grid-template-columns: minmax(0, 240px);
+    justify-content: center;
+  }
+
   .sponsor-grid {
     grid-template-columns: 1fr;
   }
+
+  .slide--poster {
+    background-size: auto, auto, cover;
+    background-position: center, center, right center;
+  }
+
+  .slide--poster .slide-content {
+    grid-template-columns: 1fr;
+  }
+
+  .slide--poster .slide-content > * {
+    max-width: 100%;
+  }
+
+  .hero-collab-badge {
+    top: 14px;
+    right: 12px;
+  }
+
+  .hero-collab-badge-logo {
+    width: 76px;
+  }
+
+  .hero-collab-badge-text {
+    font-size: 0.85rem;
+  }
+
 }

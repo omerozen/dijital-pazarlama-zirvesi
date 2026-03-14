@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -39,11 +39,25 @@
     <main>
       <section id="hero" class="hero">
         <div class="hero-slider" aria-live="polite">
-          <article class="slide is-active">
+          <article class="slide slide--poster is-active">
             <div class="slide-overlay"></div>
             <div class="container slide-content">
-              <p class="eyebrow">T.C. Trakya Üniversitesi İİBF sunar</p>
-              <h1>Dijital Pazarlama Zirvesi</h1>
+              <div class="hero-partnership">
+                <div class="hero-org">
+                  <img
+                    class="hero-org-logo"
+                    src="assets/logos/trakya-universitesi-logo.png"
+                    alt="Trakya Üniversitesi logosu"
+                  />
+                  <div class="hero-org-text">
+                    <span>T.C. Trakya Üniversitesi</span>
+                    <span>İktisadi ve İdari Bilimler Fakültesi</span>
+                  </div>
+                </div>
+              </div>
+              <h1 class="hero-title hero-title--poster">
+                Dijital Pazarlama<br />zirvesi
+              </h1>
               <p class="slide-subtitle">
                 Sektörün deneyimli isimleriyle pazarlamanın bugününü ve yarınını
                 keşfedin.
@@ -64,10 +78,11 @@
             <div class="slide-overlay"></div>
             <div class="container slide-content">
               <p class="eyebrow">10 Değerli Konuşmacı</p>
-              <h2>Markaların gerçek büyüme hikayeleri</h2>
+              <h2 class="hero-title hero-title--poster">Markaların gerçek<br />büyüme hikayeleri</h2>
               <p class="slide-subtitle">
-                Marketing Türkiye, LC Waikiki, Kuveyt Türk, Türk Telekom ve daha
-                fazlası bu sahnede.
+                Marketing Türkiye, LC Waikiki,<br />
+                Kuveyt Türk, Türk Telekom<br />
+                ve daha fazlası bu sahnede.
               </p>
               <div class="hero-cta">
                 <a class="btn btn-primary" href="#speakers">Konuşmacıları Gör</a>
@@ -79,16 +94,27 @@
             <div class="slide-overlay"></div>
             <div class="container slide-content">
               <p class="eyebrow">Katılım Sertifikası</p>
-              <h2>Ücretsiz kayıt ol, yerini şimdiden ayırt</h2>
+              <h2 class="hero-title hero-title--poster">Ücretsiz kayıt ol,<br />yerini şimdiden ayırt</h2>
               <p class="slide-subtitle">
-                Etkinlik sonunda katılım sertifikası verilecektir. Kontenjan
-                sınırlıdır.
+                Etkinlik sonunda katılım sertifikası verilecektir.<br />
+                Kontenjan sınırlıdır.
               </p>
               <div class="hero-cta">
                 <a class="btn btn-primary" href="#ticket">Kayıt Formuna Git</a>
               </div>
             </div>
           </article>
+        </div>
+
+        <div class="hero-collab-badge" aria-label="Dijital Pazarlama Topluluğu işbirliği ile">
+          <div class="hero-collab-badge-logo-shell">
+            <img
+              class="hero-collab-badge-logo"
+              src="assets/logos/dijital-pazarlama-toplulugu-logo-01.png"
+              alt="Dijital Pazarlama Topluluğu logosu"
+            />
+          </div>
+          <p class="hero-collab-badge-text">İşbirliği ile..</p>
         </div>
 
         <div class="slider-controls container">
@@ -129,47 +155,34 @@
         <div class="container">
           <p class="section-tag">Konuşmacılar</p>
           <h2>Alanında etkili isimler aynı sahnede</h2>
-          <div class="speaker-grid">
-            <article class="speaker-card">
-              <h3>Günseli Özen</h3>
-              <p>Marketing Türkiye</p>
-            </article>
-            <article class="speaker-card">
-              <h3>Gözde Elönü</h3>
-              <p>English Home</p>
-            </article>
-            <article class="speaker-card">
-              <h3>Baturay Elönü</h3>
-              <p>Sosyal Medya Kampüsü</p>
-            </article>
-            <article class="speaker-card">
-              <h3>Doğuş Uçar</h3>
-              <p>Appier</p>
-            </article>
-            <article class="speaker-card">
-              <h3>Kadir Kadıoğlu</h3>
-              <p>LC Waikiki</p>
-            </article>
-            <article class="speaker-card">
-              <h3>Erkam Mısır</h3>
-              <p>socialfamous</p>
-            </article>
-            <article class="speaker-card">
-              <h3>Özge Dinçel & Ece Nur Biçer</h3>
-              <p>Türk Telekom</p>
-            </article>
-            <article class="speaker-card">
-              <h3>Ulvi Acar</h3>
-              <p>Yataş</p>
-            </article>
-            <article class="speaker-card">
-              <h3>Hasan Erol</h3>
-              <p>Kuveyt Türk</p>
-            </article>
-            <article class="speaker-card speaker-card--featured">
-              <h3>Siz de sahnede olun</h3>
-              <p>Sonraki zirve için toplulukla iletişime geçin.</p>
-            </article>
+          <div class="speaker-poster-grid">
+            <figure class="speaker-poster">
+              <img src="assets/attendee-cards/gunseli-ozen-card.png" alt="Günseli Özen" loading="lazy" />
+            </figure>
+            <figure class="speaker-poster">
+              <img src="assets/attendee-cards/gozde-elonu-card.png" alt="Gözde Elönü" loading="lazy" />
+            </figure>
+            <figure class="speaker-poster">
+              <img src="assets/attendee-cards/baturay-elonu-card.png" alt="Baturay Elönü" loading="lazy" />
+            </figure>
+            <figure class="speaker-poster">
+              <img src="assets/attendee-cards/dogus-ucar-card.png" alt="Doğuş Uçar" loading="lazy" />
+            </figure>
+            <figure class="speaker-poster">
+              <img src="assets/attendee-cards/kadir-kadioglu-card.png" alt="Kadir Kadıoğlu" loading="lazy" />
+            </figure>
+            <figure class="speaker-poster">
+              <img src="assets/attendee-cards/erkam-misir-card.png" alt="Erkam Mısır" loading="lazy" />
+            </figure>
+            <figure class="speaker-poster">
+              <img src="assets/attendee-cards/ozge-ece-card.png" alt="Özge Dinçel ve Ece Nur Biçer" loading="lazy" />
+            </figure>
+            <figure class="speaker-poster">
+              <img src="assets/attendee-cards/ulvi-acar-card.png" alt="Ulvi Acar" loading="lazy" />
+            </figure>
+            <figure class="speaker-poster">
+              <img src="assets/attendee-cards/hasan-erol-card.png" alt="Hasan Erol" loading="lazy" />
+            </figure>
           </div>
         </div>
       </section>
@@ -243,12 +256,19 @@
 
           <article class="it-sponsor">
             <p class="section-tag">IT Sponsoru</p>
-            <img
-              class="it-sponsor-logo"
-              src="https://coreborn.com/_next/image?url=%2Fassets%2Fimg%2Froot%2Flogo-dark.png&w=640&q=75"
-              alt="Coreborn Yazılım ve Teknoloji Ltd. Şti. logosu"
-              loading="lazy"
-            />
+            <a
+              href="https://coreborn.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Coreborn web sitesini aç"
+            >
+              <img
+                class="it-sponsor-logo"
+                src="assets/logos/COREBORN-white-153x26.png"
+                alt="Coreborn Yazılım ve Teknoloji Ltd. Şti. logosu"
+                loading="lazy"
+              />
+            </a>
             <h3>Coreborn Yazılım ve Teknoloji Ltd. Şti.</h3>
             <p>
               Bu web sitesi, etkinliğe teknoloji desteği sağlamak amacıyla
