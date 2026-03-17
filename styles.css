@@ -861,6 +861,20 @@ p {
     padding-bottom: 94px;
   }
 
+  .hero .hero-title--poster {
+    font-size: clamp(1.9rem, 7.2vw, 2.25rem);
+    line-height: 0.98;
+    letter-spacing: 0.3px;
+  }
+
+  .slide--poster .hero-title--poster {
+    white-space: nowrap;
+  }
+
+  .slide--poster .hero-title--poster br {
+    display: none;
+  }
+
   .countdown-grid {
     grid-template-columns: repeat(4, minmax(46px, 58px));
     gap: 5px;
