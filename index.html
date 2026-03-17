@@ -20,7 +20,6 @@
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="#hero">
-          <span class="brand-mark" aria-hidden="true">DP</span>
           <span class="brand-text">Dijital Pazarlama Zirvesi</span>
         </a>
         <button class="mobile-toggle" aria-label="Menüyü Aç" aria-expanded="false">
@@ -107,13 +106,21 @@
         </div>
 
         <div class="hero-collab-badge" aria-label="Dijital Pazarlama Topluluğu işbirliği ile">
-          <div class="hero-collab-badge-logo-shell">
-            <img
-              class="hero-collab-badge-logo"
-              src="assets/logos/dijital-pazarlama-toplulugu-logo-01.png"
-              alt="Dijital Pazarlama Topluluğu logosu"
-            />
-          </div>
+          <a
+            class="hero-collab-badge-link"
+            href="https://www.instagram.com/tudijitalpazarlamatoplulugu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Dijital Pazarlama Topluluğu Instagram sayfasını aç"
+          >
+            <div class="hero-collab-badge-logo-shell">
+              <img
+                class="hero-collab-badge-logo"
+                src="assets/logos/dijital-pazarlama-toplulugu-logo-01.png"
+                alt="Dijital Pazarlama Topluluğu logosu"
+              />
+            </div>
+          </a>
           <p class="hero-collab-badge-text">İşbirliği ile..</p>
         </div>
 
@@ -269,7 +276,17 @@
                 loading="lazy"
               />
             </a>
-            <h3>Coreborn Yazılım ve Teknoloji Ltd. Şti.</h3>
+            <h3>
+              <a
+                class="it-sponsor-title-link"
+                href="https://coreborn.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Coreborn web sitesini aç"
+              >
+                Coreborn Yazılım ve Teknoloji Ltd. Şti.
+              </a>
+            </h3>
             <p>
               Bu web sitesi, etkinliğe teknoloji desteği sağlamak amacıyla
               <strong>Coreborn Yazılım ve Teknoloji Ltd. Şti.</strong> tarafından
@@ -285,29 +302,20 @@
             <p class="section-tag">Ücretsiz Bilet</p>
             <h2>Kaydını tamamla, yerini şimdiden ayırt</h2>
             <p>
-              Formu doldurduktan sonra kayıt bilgilendirmeniz e-posta adresinize
-              gönderilecektir.
+              Kontenjan sınırlı. Bilet sayfasına geçerek kaydını hemen
+              tamamlayabilirsin.
             </p>
           </div>
-          <form class="ticket-form" id="ticketForm">
-            <label>
-              Ad Soyad
-              <input type="text" name="name" required />
-            </label>
-            <label>
-              E-posta
-              <input type="email" name="email" required />
-            </label>
-            <label>
-              Telefon
-              <input type="tel" name="phone" required />
-            </label>
-            <label>
-              Üniversite / Şirket
-              <input type="text" name="org" />
-            </label>
-            <button type="submit" class="btn btn-primary">Ücretsiz Bilet Al</button>
-          </form>
+          <div class="ticket-cta-panel">
+            <a
+              class="btn btn-ticket-large"
+              href="https://www.biletimgo.com/etkinlik/dijital-pazarlama-zirvesi-24703"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ücretsiz Bilet Al
+            </a>
+          </div>
         </div>
       </section>
     </main>
@@ -317,7 +325,17 @@
         <p>
           © 2026 Dijital Pazarlama Zirvesi - Trakya Üniversitesi İİBF
         </p>
-        <p>IT Sponsoru: Coreborn Yazılım ve Teknoloji Ltd. Şti.</p>
+        <p>
+          <a
+            class="footer-it-link"
+            href="https://coreborn.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Coreborn web sitesini aç"
+          >
+            IT Sponsoru: Coreborn Yazılım ve Teknoloji Ltd. Şti.
+          </a>
+        </p>
       </div>
     </footer>
 
