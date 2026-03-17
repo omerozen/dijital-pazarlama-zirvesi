@@ -760,8 +760,9 @@ p {
   }
 
   .slide-content {
-    padding-top: 14px;
-    padding-bottom: 110px;
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 126px;
   }
 
   .countdown-grid {
@@ -857,12 +858,13 @@ p {
 
   .slide-content {
     gap: 12px;
-    padding-top: 6px;
-    padding-bottom: 94px;
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 132px;
   }
 
   .hero .hero-title--poster {
-    font-size: clamp(1.9rem, 7.2vw, 2.25rem);
+    font-size: clamp(2.05rem, 7.8vw, 2.4rem);
     line-height: 0.98;
     letter-spacing: 0.3px;
   }
