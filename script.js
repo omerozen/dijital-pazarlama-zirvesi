@@ -81,6 +81,64 @@ if (nextBtn) {
   });
 }
 
+const countdownBlocks = Array.from(document.querySelectorAll(".countdown[data-target]"));
+
+function updateCountdownBlock(block) {
+  const targetText = block.getAttribute("data-target");
+  const targetMs = targetText ? new Date(targetText).getTime() : NaN;
+  if (Number.isNaN(targetMs)) return;
+
+  const label = block.querySelector(".countdown-label");
+  if (label && !block.dataset.defaultLabel) {
+    block.dataset.defaultLabel = label.textContent.trim();
+  }
+
+  const nowMs = Date.now();
+  let diff = targetMs - nowMs;
+
+  if (diff <= 0) {
+    diff = 0;
+    block.classList.add("is-finished");
+    if (label) {
+      label.textContent = "Etkinlik Başladı";
+    }
+  } else {
+    block.classList.remove("is-finished");
+    if (label && block.dataset.defaultLabel) {
+      label.textContent = block.dataset.defaultLabel;
+    }
+  }
+
+  const totalSeconds = Math.floor(diff / 1000);
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  const values = {
+    days: String(days).padStart(2, "0"),
+    hours: String(hours).padStart(2, "0"),
+    minutes: String(minutes).padStart(2, "0"),
+    seconds: String(seconds).padStart(2, "0")
+  };
+
+  Object.entries(values).forEach(([unit, value]) => {
+    const node = block.querySelector(`.countdown-value[data-unit="${unit}"]`);
+    if (node) {
+      node.textContent = value;
+    }
+  });
+}
+
+if (countdownBlocks.length) {
+  const tickCountdowns = () => {
+    countdownBlocks.forEach(updateCountdownBlock);
+  };
+
+  tickCountdowns();
+  setInterval(tickCountdowns, 1000);
+}
+
 const revealItems = document.querySelectorAll(".reveal");
 
 if ("IntersectionObserver" in window && revealItems.length) {

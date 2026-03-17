@@ -367,6 +367,63 @@ p {
   gap: 8px;
 }
 
+.countdown {
+  width: fit-content;
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.countdown-label {
+  display: none;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(58px, 76px));
+  gap: 10px;
+}
+
+.countdown-item {
+  padding: 8px 6px;
+  border-radius: 12px;
+  border: 1px solid #dfe4ef;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(5, 12, 33, 0.22);
+  text-align: center;
+}
+
+.countdown-value {
+  display: block;
+  color: #101a3c;
+  font-size: clamp(1.1rem, 2.1vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.countdown-unit {
+  display: block;
+  margin-top: 3px;
+  color: #5b6782;
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.countdown.is-finished .countdown-item {
+  background: rgba(255, 203, 100, 0.24);
+  border-color: rgba(255, 194, 70, 0.5);
+}
+
+.countdown--hero {
+  margin-top: 2px;
+}
+
+.countdown--ticket {
+  margin-top: 14px;
+}
+
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
@@ -628,6 +685,10 @@ p {
   color: var(--accent-strong);
 }
 
+.mobile-line-break {
+  display: none;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -687,9 +748,33 @@ p {
     padding: 74px 0;
   }
 
+  .footer-wrap {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .mobile-line-break {
+    display: block;
+  }
+
   .slide-content {
-    padding-top: 24px;
+    padding-top: 14px;
     padding-bottom: 110px;
+  }
+
+  .countdown-grid {
+    grid-template-columns: repeat(4, minmax(52px, 66px));
+    gap: 8px;
+  }
+
+  .countdown-item {
+    padding: 7px 4px;
+  }
+
+  .countdown-unit {
+    font-size: 0.6rem;
   }
 
   .speaker-poster-grid {
@@ -772,8 +857,13 @@ p {
 
   .slide-content {
     gap: 12px;
-    padding-top: 20px;
+    padding-top: 6px;
     padding-bottom: 94px;
+  }
+
+  .countdown-grid {
+    grid-template-columns: repeat(4, minmax(46px, 58px));
+    gap: 5px;
   }
 
   .hero-org-logo {
