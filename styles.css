@@ -850,10 +850,9 @@ p {
   }
 
   .hero-collab-badge {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    justify-items: center;
+    left: auto;
+    right: 14px;
+    transform: none;
   }
 }
 
@@ -929,10 +928,9 @@ p {
 
   .hero-collab-badge {
     bottom: 86px;
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    justify-items: center;
+    left: auto;
+    right: 14px;
+    transform: none;
   }
 
   .hero-collab-badge-logo-shell {
@@ -1008,10 +1006,9 @@ p {
 
   .hero-collab-badge {
     bottom: 78px;
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    justify-items: center;
+    left: auto;
+    right: 10px;
+    transform: none;
   }
 
   .hero-collab-badge-logo-shell {
