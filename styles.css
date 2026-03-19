@@ -438,9 +438,10 @@ p {
   right: max(14px, 3vw);
   z-index: 8;
   display: grid;
-  justify-items: end;
+  justify-items: center;
   gap: 0;
   pointer-events: auto;
+  text-align: center;
 }
 
 .hero-collab-badge-link {
@@ -457,7 +458,7 @@ p {
 }
 
 .hero-collab-badge-logo {
-  width: clamp(72px, 8.5vw, 112px);
+  width: clamp(66px, 7.8vw, 102px);
   height: auto;
   display: block;
 }
@@ -471,6 +472,8 @@ p {
   line-height: 1;
   color: #ffffff;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+  width: 100%;
+  text-align: center;
 }
 
 .slider-controls {
@@ -937,7 +940,7 @@ p {
   }
 
   .hero-collab-badge-logo {
-    width: 86px;
+    width: 76px;
   }
 
   .hero-collab-badge-text {
@@ -1016,7 +1019,7 @@ p {
   }
 
   .hero-collab-badge-logo {
-    width: 76px;
+    width: 66px;
   }
 
   .hero-collab-badge-text {
