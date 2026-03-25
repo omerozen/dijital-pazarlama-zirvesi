@@ -335,7 +335,10 @@ p {
   width: 94px;
   height: 94px;
   border-radius: 999px;
-  object-fit: cover;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 5px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.32);
 }
 
 .hero-org-text {
@@ -464,11 +467,11 @@ p {
 }
 
 .hero-collab-badge-text {
-  margin: 4px 0 0;
-  font-family: "Great Vibes", cursive;
-  font-size: clamp(1.1rem, 1.9vw, 1.6rem);
-  font-weight: 400;
-  letter-spacing: 0;
+  margin: 8px 0 0;
+  font-family: "Dancing Script", "Great Vibes", cursive;
+  font-size: clamp(1.05rem, 1.8vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: 0.01em;
   line-height: 1;
   color: #ffffff;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
@@ -568,11 +571,36 @@ p {
 
 .schedule-row {
   display: grid;
-  grid-template-columns: 110px 1fr;
+  grid-template-columns: 138px 1fr;
   gap: 18px;
   padding: 18px 22px;
   background: rgba(12, 19, 52, 0.72);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.schedule-row--session {
+  grid-template-columns: 1fr;
+  gap: 8px;
+  text-align: center;
+  padding: 20px 22px 18px;
+  background: linear-gradient(140deg, rgba(31, 48, 112, 0.82), rgba(90, 66, 23, 0.75));
+  border-top: 1px solid rgba(255, 210, 122, 0.45);
+  border-bottom: 1px solid rgba(255, 210, 122, 0.45);
+}
+
+.schedule-row--session .time {
+  color: #ffffff;
+  font-size: clamp(1.25rem, 2.4vw, 1.9rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.schedule-row--session h3 {
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+  letter-spacing: 0.08em;
+  color: #f5d27b;
 }
 
 .schedule-row:last-child {
@@ -943,7 +971,7 @@ p {
 
   .hero-collab-badge-text {
     font-size: 0.9rem;
-    margin-top: 2px;
+    margin-top: 5px;
   }
 }
 
@@ -1021,7 +1049,7 @@ p {
 
   .hero-collab-badge-text {
     font-size: 0.85rem;
-    margin-top: 1px;
+    margin-top: 4px;
   }
 
 }
